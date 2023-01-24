@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script type="module" src="./index.js"></script>
   <title>Ejercicio 6</title>
 </head>
 <body>
@@ -12,7 +13,19 @@
   <a href="../">Volver</a>
 
   <p>
-    Este ejercicio requiere de un servidor y para no enfangar este proyecto se realiza en un proyecto para él mismo.
+    Este ejercicio depende de un un <code>json-server</code> desplegado actualmente en <a href="https://json-server-demo-production.up.railway.app/" target="_blank">Railway</a>.
   </p>
+
+  <form id="form">
+    <label for="description">Descripción del artículo</label>
+    <input type="text" name="description" id="description">
+
+    <label for="price">Precio</label>
+    <input type="number" name="price" id="price" min="1">
+
+    <input type="submit" value="Nuevo artículo">
+  </form>
+
+  <table id="table"></table>
 </body>
 </html>
