@@ -1,16 +1,16 @@
 import { url } from './jsonServerBaseURL.js'
 
 /**
- * @param {string} description 
- * @param {string} price 
+ * @param {string} description
+ * @param {string} price
  */
 export async function createNewFruit (description, price) {
   const productsEndpoint = url + 'fruits'
-  const payload = [{
-    description: description,
-    price: price 
-  }]
-  console.log(payload)
+  const payload = {
+    description,
+    price
+  }
+
   const response = await window.fetch(productsEndpoint, {
     method: 'POST',
     body: JSON.stringify(payload),
